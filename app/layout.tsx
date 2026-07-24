@@ -1,14 +1,26 @@
-import { Geist, Geist_Mono } from "next/font/google"
-
 import "./globals.css"
+import localFont from "next/font/local"
 import { ThemeProvider } from "@/components/theme-provider"
+import { SidebarInset, SidebarProvider } from "@/components/ui"
+import { AppHeader, AppSidebar } from "@/components/common"
 import { cn } from "@/lib/utils"
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
-
-const fontMono = Geist_Mono({
-    subsets: ["latin"],
-    variable: "--font-mono",
+const presentationFont = localFont({
+    src: [
+        { path: "../public/fonts/Freesentation-1Thin.woff2", weight: "100", style: "normal" },
+        { path: "../public/fonts/Freesentation-2ExtraLight.woff2", weight: "200", style: "normal" },
+        { path: "../public/fonts/Freesentation-3Light.woff2", weight: "300", style: "normal" },
+        { path: "../public/fonts/Freesentation-4Regular.woff2", weight: "400", style: "normal" },
+        { path: "../public/fonts/Freesentation-5Medium.woff2", weight: "500", style: "normal" },
+        { path: "../public/fonts/Freesentation-6SemiBold.woff2", weight: "600", style: "normal" },
+        { path: "../public/fonts/Freesentation-7Bold.woff2", weight: "700", style: "normal" },
+        { path: "../public/fonts/Freesentation-8ExtraBold.woff2", weight: "800", style: "normal" },
+        { path: "../public/fonts/Freesentation-9Black.woff2", weight: "900", style: "normal" },
+    ],
+    variable: "--font-presentation",
+    display: "swap",
+    fallback: ["Apple SD Gothic Neo", "Malgun Gothic", "sans-serif"],
+    adjustFontFallback: false,
 })
 
 export default function RootLayout({
@@ -17,9 +29,17 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}>
+        <html lang="ko" suppressHydrationWarning className={cn("antialiased", presentationFont.variable)}>
             <body>
-                <ThemeProvider>{children}</ThemeProvider>
+                <ThemeProvider>
+                    <SidebarProvider>
+                        <AppSidebar />
+                        <SidebarInset>
+                            <AppHeader />
+                            <main className="p-4">{children}</main>
+                        </SidebarInset>
+                    </SidebarProvider>
+                </ThemeProvider>
             </body>
         </html>
     )

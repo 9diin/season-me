@@ -17,8 +17,8 @@ export default function Home() {
                     </Button>
                 </div>
                 <div className="flex w-full gap-4">
-                    <Card className="gap w-2/3 max-w-2/3 gap-2 p-0 ring-0">
-                        <div className="relative aspect-video w-full">
+                    <Card className="gap w-2/3 max-w-2/3 gap-2 bg-transparent p-0 ring-0">
+                        <div className="relative min-h-0 w-full flex-1">
                             <Image src={"/images/sample-001.jpeg"} fill className="rounded-xl object-cover" alt="이미지" />
                             {/* 전체 블랙 명암 레이어 */}
                             <div className="absolute inset-0 rounded-xl bg-black/20" />
@@ -51,11 +51,11 @@ export default function Home() {
                                 <span className="mt-px font-semibold">방배동워렌버핏</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <div className="flex items-center gap-0.5">
+                                <div className="flex items-center gap-1">
                                     <Image src={"/icons/heart.svg"} alt="icon" width={18} height={18} />
                                     <span className="mt-0.75 font-semibold">100</span>
                                 </div>
-                                <div className="flex items-center gap-0.5">
+                                <div className="flex items-center gap-1">
                                     <Image src={"/icons/eyes.svg"} alt="icon" width={18} height={18} />
                                     <span className="mt-0.75 font-semibold">100</span>
                                 </div>
@@ -63,7 +63,7 @@ export default function Home() {
                         </div>
                     </Card>
                     <div className="flex w-1/3 max-w-1/3 flex-col gap-4">
-                        <Card className="w-full gap-2 p-0 ring-0">
+                        <Card className="w-full flex-1 gap-2 bg-transparent p-0 ring-0">
                             <div className="relative aspect-video w-full">
                                 <Image src={"/images/sample-002.jpeg"} fill className="rounded-xl object-cover" alt="이미지" />
                                 {/* 전체 블랙 명암 레이어 */}
@@ -86,25 +86,25 @@ export default function Home() {
                             </div>
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-2">
-                                    <Avatar className="h-6! w-6!">
+                                    <Avatar className="h-7! w-7!">
                                         <AvatarImage src="https://github.com/9diin.png" />
                                         <AvatarFallback>CN</AvatarFallback>
                                     </Avatar>
                                     <span className="mt-px font-semibold">방배동워렌버핏</span>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <div className="flex items-center gap-0.5">
+                                    <div className="flex items-center gap-1">
                                         <Image src={"/icons/heart.svg"} alt="icon" width={18} height={18} />
                                         <span className="mt-0.75 font-semibold">100</span>
                                     </div>
-                                    <div className="flex items-center gap-0.5">
+                                    <div className="flex items-center gap-1">
                                         <Image src={"/icons/eyes.svg"} alt="icon" width={18} height={18} />
                                         <span className="mt-0.75 font-semibold">100</span>
                                     </div>
                                 </div>
                             </div>
                         </Card>
-                        <Card className="w-full gap-2 p-0 ring-0">
+                        <Card className="w-full flex-1 gap-2 bg-transparent p-0 ring-0">
                             <div className="relative aspect-video w-full">
                                 <Image src={"/images/sample-003.jpeg"} fill className="rounded-xl object-cover" alt="이미지" />
                                 {/* 전체 블랙 명암 레이어 */}
@@ -127,18 +127,18 @@ export default function Home() {
                             </div>
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-2">
-                                    <Avatar className="h-6! w-6!">
+                                    <Avatar className="h-7! w-7!">
                                         <AvatarImage src="https://github.com/9diin.png" />
                                         <AvatarFallback>CN</AvatarFallback>
                                     </Avatar>
                                     <span className="mt-px font-semibold">방배동워렌버핏</span>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <div className="flex items-center gap-0.5">
+                                    <div className="flex items-center gap-1">
                                         <Image src={"/icons/heart.svg"} alt="icon" width={18} height={18} />
                                         <span className="mt-0.75 font-semibold">100</span>
                                     </div>
-                                    <div className="flex items-center gap-0.5">
+                                    <div className="flex items-center gap-1">
                                         <Image src={"/icons/eyes.svg"} alt="icon" width={18} height={18} />
                                         <span className="mt-0.75 font-semibold">100</span>
                                     </div>

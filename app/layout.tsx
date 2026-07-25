@@ -36,7 +36,7 @@ export default function RootLayout({
                         <AppSidebar />
                         <SidebarInset className="flex-1 items-center">
                             <AppHeader />
-                            <main className="h-full w-full max-w-6xl p-4 pt-0">{children}</main>
+                            <main className="h-full w-full max-w-6xl py-4 pt-0">{children}</main>
                         </SidebarInset>
                     </SidebarProvider>
                 </ThemeProvider>

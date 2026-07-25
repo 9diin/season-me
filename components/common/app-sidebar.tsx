@@ -1,10 +1,16 @@
 "use client"
 
-import * as React from "react"
+import Image from "next/image"
+import { Fascinate } from "next/font/google"
 import { AudioWaveform, BookOpen, Bot, Command, GalleryVerticalEnd, Settings2, SquareTerminal } from "lucide-react"
 
-import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "../ui"
+import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarRail } from "../ui"
 import { NavMain, NavUser } from "./side-bar"
+
+const fascinate = Fascinate({
+    weight: "400",
+    subsets: ["latin"],
+})
 
 const data = {
     user: {
@@ -121,7 +127,18 @@ const data = {
 export default function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     return (
         <Sidebar collapsible="icon" {...props}>
-            <SidebarHeader>{/* <TeamSwitcher teams={data.teams} /> */}</SidebarHeader>
+            <SidebarHeader>
+                <SidebarMenu>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton size="lg" asChild>
+                            <a href="#" className="flex items-center gap-2">
+                                <Image src={"/icons/logo.svg"} alt="로고" width={28} height={28} />
+                                <span className={`${fascinate.className} mb-0.5 text-lg tracking-wide`}>Museum 365</span>
+                            </a>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                </SidebarMenu>
+            </SidebarHeader>
             <SidebarContent>
                 <NavMain items={data.navMain} />
                 {/* <NavProjects projects={data.projects} /> */}

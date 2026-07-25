@@ -20,7 +20,7 @@ export default function NavMain({
 }) {
     return (
         <SidebarGroup>
-            <SidebarGroupLabel>뮤지엄 365</SidebarGroupLabel>
+            <SidebarGroupLabel>메뉴</SidebarGroupLabel>
             <SidebarMenu className="gap-2">
                 <SidebarMenuItem>
                     <SidebarMenuButton
